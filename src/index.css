@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+body {
+  font-family: "Encode Sans Expanded" , sans-serif;
+  color: white;
+  background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  url('https://assets.nflxext.com/ffe/siteui/vlv3/a1dc92ca-091d-4ca9-a05b-8cd44bbfce6a/f9368347-e982-4856-a5a4-396796381f28/RS-en-20191230-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+ 
+}
+.navbar input {
+  width: 50%; margin: auto 5; height: 38px;
+}
+.Movies{
+  display: grid; grid-template-columns: repeat(6,1fr);
+  row-gap: 20px; column-gap: 20px;
+}
+.Movies .movie img {
+  height:210px ; width: 100%;
+  display: block;
+}
+.Movies .movie{
+  position: relative;
+}
+.Movies .movie .overlay{
+position: absolute; left: 0; bottom: 0; right: 0;
+width: 100%; height: 0px;
+overflow: hidden;
+transition: all 0.6s ease;
+background-color: rgb(0,0,0, 0.4);
+}
+.Movies .movie:hover .overlay{
+  height: 100%; 
+}
+#logOut-icon:hover{
+  color: red;
+}
+#displayMovie img {
+  height: 350px;
+}
+#displayMovie , #loadingPage , #moviesPage , #home-page ,#register {
+  min-height: 80vh;
+}
+form{
+  width: 50%; border-radius: 20px;
+}
+#logo {
+  margin: 0px;
+}
+@media (max-width: 600px){
+  .navbar input {
+  padding: 3px; margin:auto; width: 100%; height: 45px;
+ }
+ .Movies{
+  display: grid; grid-template-columns: repeat(2,1fr);
+  row-gap: 20px; column-gap: 15px;
+}
+.Movies .movie img {
+  height:200px ; width: 100%;
+}
+#displayMovie{
+  flex-direction: column;
+}
+#displayMovie img{
+  width: 90%; margin: 5px auto;
+}
+form {
+  width: 85%; margin: auto;
+}
+}
+@media (min-width: 600px) and (max-width: 1024px){
+  #displayMovie , #loadingPage , #moviesPage , #home-page ,#register {
+    min-height: 88vh;
+  }
+  form{
+    width: 80%;margin: auto;
+  }
+  .Movies{
+    display: grid; grid-template-columns: repeat(3,1fr);
+    row-gap: 20px; column-gap: 15px;
+  }
+  .navbar input {
+    padding: 3px; margin:auto; width: 100%; height: 45px;
+   }
+   #displayMovie{
+    flex-direction: column;
+  }
+   #displayMovie img{
+    width: 90%; margin: 5px auto;
+  }
+}
